@@ -1,14 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientConsole", "ClientConsole\ClientConsole.csproj", "{351571D6-C4D2-4CD4-99BF-DCC14ADE781A}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientConsole", "ClientConsole\ClientConsole.csproj", "{351571D6-C4D2-4CD4-99BF-DCC14ADE781A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceApi.Server", "WebServiceApi.Server\WebServiceApi.Server.csproj", "{A8D4DF0F-7955-48FE-AFD3-009DBEF7AFF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebServiceApi.Server", "WebServiceApi.Server\WebServiceApi.Server.csproj", "{A8D4DF0F-7955-48FE-AFD3-009DBEF7AFF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpAsynchronous.Server", "TcpAsynchronous.Server\TcpAsynchronous.Server.csproj", "{CA088F00-500A-4E8C-BD8F-C2AA58AD053D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TcpAsynchronous.Server", "TcpAsynchronous.Server\TcpAsynchronous.Server.csproj", "{CA088F00-500A-4E8C-BD8F-C2AA58AD053D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpSynchronous.Server", "TcpSynchronous.Server\TcpSynchronous.Server.csproj", "{0F51F0B1-54F8-4A78-B08E-BA712A220155}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TcpSynchronous.Server", "TcpSynchronous.Server\TcpSynchronous.Server.csproj", "{0F51F0B1-54F8-4A78-B08E-BA712A220155}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParallelEstimationOfPi", "ParallelEstimationOfPi\ParallelEstimationOfPi.csproj", "{49CE3049-66C1-49CF-AEF1-35F3D137720B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParallelEstimationOfPi", "ParallelEstimationOfPi\ParallelEstimationOfPi.csproj", "{49CE3049-66C1-49CF-AEF1-35F3D137720B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grpc.Server", "Grpc.Server\Grpc.Server.csproj", "{441EF52E-05BE-4DB0-AC89-DC33583A4DC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,9 +23,9 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{351571D6-C4D2-4CD4-99BF-DCC14ADE781A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{351571D6-C4D2-4CD4-99BF-DCC14ADE781A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{351571D6-C4D2-4CD4-99BF-DCC14ADE781A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{351571D6-C4D2-4CD4-99BF-DCC14ADE781A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{351571D6-C4D2-4CD4-99BF-DCC14ADE781A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{351571D6-C4D2-4CD4-99BF-DCC14ADE781A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{A8D4DF0F-7955-48FE-AFD3-009DBEF7AFF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A8D4DF0F-7955-48FE-AFD3-009DBEF7AFF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8D4DF0F-7955-48FE-AFD3-009DBEF7AFF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -31,12 +36,22 @@ Global
 		{CA088F00-500A-4E8C-BD8F-C2AA58AD053D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0F51F0B1-54F8-4A78-B08E-BA712A220155}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0F51F0B1-54F8-4A78-B08E-BA712A220155}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F51F0B1-54F8-4A78-B08E-BA712A220155}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{0F51F0B1-54F8-4A78-B08E-BA712A220155}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F51F0B1-54F8-4A78-B08E-BA712A220155}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0F51F0B1-54F8-4A78-B08E-BA712A220155}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{49CE3049-66C1-49CF-AEF1-35F3D137720B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{49CE3049-66C1-49CF-AEF1-35F3D137720B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49CE3049-66C1-49CF-AEF1-35F3D137720B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49CE3049-66C1-49CF-AEF1-35F3D137720B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{441EF52E-05BE-4DB0-AC89-DC33583A4DC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{441EF52E-05BE-4DB0-AC89-DC33583A4DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{441EF52E-05BE-4DB0-AC89-DC33583A4DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{441EF52E-05BE-4DB0-AC89-DC33583A4DC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE3F0394-001F-4E44-B6B6-934F1AF8FEF7}
 	EndGlobalSection
 EndGlobal
