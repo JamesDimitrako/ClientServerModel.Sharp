@@ -12,6 +12,14 @@ namespace ClientConsole
         {
             // The port number(5005) must match the port of the gRPC server.
             using var channel = GrpcChannel.ForAddress("https://localhost:5005");
+
+            var piClient = new EstimationOfPi.EstimationOfPiClient(channel);
+
+            var replyPi = await piClient.EstimateAsync(new PiRequest {NumberOfSteps = 4000});
+
+            Console.WriteLine($"Pi: {replyPi}");
+            Console.ReadKey();
+
             var client = new Greeter.GreeterClient(channel);
             var reply = await client.SayHelloAsync(new HelloRequest {Name = "GreeterClient"});
             Console.WriteLine($"Greeting: {reply.Message}");

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "ClientConsole";
+
+package pi;
+
+// The EstimationOfPi service definition.
+service EstimationOfPi {
+	// Sends a estimationRequest
+	rpc Estimate (PiRequest) returns (PiReply);
+}
+
+// The request message containing the numberOfSteps.
+message PiRequest {
+	int64 numberOfSteps = 1;
+}
+
+// The response message containing the estimation.
+message PiReply {
+	double estimation = 1;
+}

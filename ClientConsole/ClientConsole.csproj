@@ -4,6 +4,10 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
+      <None Remove="Protos\pi.proto" />
+    </ItemGroup>
+    <ItemGroup>
+        <Protobuf Include="Protos\pi.proto" GrpcServices="Client" />
         <Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
     </ItemGroup>
     <ItemGroup>
