@@ -17,7 +17,7 @@ namespace ClientConsole
 
             var replyPi = await piClient.EstimateAsync(new PiRequest {NumberOfSteps = 4000});
 
-            Console.WriteLine($"Pi: {replyPi}");
+            Console.WriteLine($"myPi Grpc: {replyPi}");
             Console.ReadKey();
 
             var client = new Greeter.GreeterClient(channel);
