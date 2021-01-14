@@ -18,10 +18,10 @@ namespace WebServiceApi.Server.Controllers
             int numberOfCores = Environment.ProcessorCount;
             var piEstimation = new ParallelForEstimationOfPi(numberOfCores);
 
-            // Creates a new model of Pi /Models/Pi(For json serialization)
-            var pi = new Pi
+            // Creates a new model of Pi /Models/Pi(For Json serialization)
+            var pi = new PiEstimation
             {
-                Value = piEstimation.ParallelPi(numberOfSteps)
+                MyPi = piEstimation.ParallelPi(numberOfSteps)
             };
 
             //jsonReturn.
