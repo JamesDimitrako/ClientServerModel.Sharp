@@ -9,7 +9,11 @@ namespace ClientConsole
         {
             Console.WriteLine("Hello World from client!");
             //SocketSynchronousClient.StartClient();
-            await GrpcClient.ConnectToServer();
+
+            var messageQueue = new MessageQueueClient();
+            messageQueue.SendMessageToQueue("40000");
+
+           // await GrpcClient.ConnectToServer();
 
         }
     }

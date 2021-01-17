@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParallelEstimationOfPi", "P
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grpc.Server", "Grpc.Server\Grpc.Server.csproj", "{441EF52E-05BE-4DB0-AC89-DC33583A4DC3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageQueue.Server", "MessageQueue.Server\MessageQueue.Server.csproj", "{6D3F48F1-54EA-476A-9AC4-2AC5E697A32A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{441EF52E-05BE-4DB0-AC89-DC33583A4DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{441EF52E-05BE-4DB0-AC89-DC33583A4DC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{441EF52E-05BE-4DB0-AC89-DC33583A4DC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D3F48F1-54EA-476A-9AC4-2AC5E697A32A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D3F48F1-54EA-476A-9AC4-2AC5E697A32A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D3F48F1-54EA-476A-9AC4-2AC5E697A32A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D3F48F1-54EA-476A-9AC4-2AC5E697A32A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
