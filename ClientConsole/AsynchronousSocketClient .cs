@@ -27,7 +27,7 @@ namespace ClientConsole
             {
                 // Establish the remote endpoint for the socket.  
                 // The name of the
-                // remote device is "host.contoso.com".  
+                // remote device is "host.workstation.com".  
                 IPHostEntry ipHostInfo = Dns.GetHostEntry("host.contoso.com");
                 IPAddress ipAddress = ipHostInfo.AddressList[0];
                 IPEndPoint remoteEP = new IPEndPoint(ipAddress, port);
