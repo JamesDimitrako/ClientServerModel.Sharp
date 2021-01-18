@@ -28,17 +28,17 @@ namespace ClientConsole
                 sender.Connect(remoteEP);  
   
                 Console.WriteLine("Socket connected to {0}",  
-                    sender.RemoteEndPoint.ToString());  
-  
-                // Encode the data string into a byte array.  
-                byte[] msg = Encoding.ASCII.GetBytes("This is a test<EOF>");  
+                    sender.RemoteEndPoint.ToString());
+
+                    // Encode number Of steps for estimation of pi to the remote device.  
+                    byte[] msg = Encoding.ASCII.GetBytes($"{numberOfSteps}<EOF>");  
   
                 // Send the data through the socket.  
                 int bytesSent = sender.Send(msg);  
   
-                // Receive the response from the remote device.  
+                // Receive the estimation of pi.
                 int bytesRec = sender.Receive(bytes);  
-                Console.WriteLine("Echoed test = {0}",  
+                Console.WriteLine("The estimation of pi is : {0}",  
                     Encoding.ASCII.GetString(bytes,0,bytesRec));  
   
                 // Release the socket.  
