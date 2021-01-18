@@ -4,7 +4,7 @@ using Grpc.Core;
 using Microsoft.Extensions.Logging;
 using ParallelEstimationOfPi;
 
-namespace Grpc.Server
+namespace Grpc.Server.Services
 {
     public class EstimationOfPiService : EstimationOfPi.EstimationOfPiBase
     {
@@ -16,13 +16,14 @@ namespace Grpc.Server
             _logger = logger;
         }
 
-        public override Task<PiReply> Estimate(PiRequest request, ServerCallContext context)
+        public override async Task<PiReply> Estimate(PiRequest request, ServerCallContext context)
         {
             var parallelPiEstimation = new ParallelForEstimationOfPi(NumberOfCores);
-            return Task.FromResult(new PiReply
+            var piEstimation = await parallelPiEstimation.ParallelPi(request.NumberOfSteps);
+            return new PiReply()
             {
-                Estimation = parallelPiEstimation.ParallelPi(request.NumberOfSteps)
-            });
+                Estimation = piEstimation
+            };
         }
     }
 }
