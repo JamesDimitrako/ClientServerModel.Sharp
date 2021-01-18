@@ -5,9 +5,9 @@ using System.Text;
 
 namespace ClientConsole
 {
-    public class SocketSynchronousClient
+    public class SocketClient
     {
-       public static void StartClient() {  
+       public static void StartClient(long numberOfSteps) {  
         // Data buffer for incoming data.  
         byte[] bytes = new byte[1024];  
   
@@ -56,6 +56,6 @@ namespace ClientConsole
         } catch (Exception e) {  
             Console.WriteLine( e.ToString());  
         }  
-        }
+       }
     }
 }

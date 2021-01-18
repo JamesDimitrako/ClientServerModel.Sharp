@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using ParallelEstimationOfPi;
 using WebServiceApi.Server.Models;
@@ -15,13 +16,15 @@ namespace WebServiceApi.Server.Controllers
         [HttpGet("{numberOfSteps}")]
         public async Task<IActionResult> Get(long numberOfSteps)
         { 
-            int numberOfCores = Environment.ProcessorCount;
-            var piEstimation = new ParallelForEstimationOfPi(numberOfCores);
+             int numberOfCores = Environment.ProcessorCount;
+
+             var piEstimation = new ParallelForEstimationOfPi(numberOfCores);
+
 
             // Creates a new model of Pi /Models/Pi(For Json serialization)
             var pi = new PiEstimation
             {
-                MyPi = piEstimation.ParallelPi(numberOfSteps)
+                MyPi = await piEstimation.ParallelPi(numberOfSteps)
             };
 
             //jsonReturn.

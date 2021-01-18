@@ -10,7 +10,6 @@ namespace MessageQueue.Server
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            //factory.Uri = new Uri("amqp://guest:guest@localhost:5672/vhost");
 
             ConnectionFactory factory = new ConnectionFactory
             {
@@ -20,8 +19,6 @@ namespace MessageQueue.Server
                 HostName = "localhost",
                 ClientProvidedName = "app:audit component:event-consumer"
             };
-            // "guest"/"guest" by default, limited to localhost connections
-
 
             using var connection = factory.CreateConnection();
             using var channel = connection.CreateModel();

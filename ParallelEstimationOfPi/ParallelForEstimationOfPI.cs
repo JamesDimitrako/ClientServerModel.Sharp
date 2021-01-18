@@ -13,7 +13,7 @@ namespace ParallelEstimationOfPi
             _numberOfCores = numberOfCores;
         }
 
-        public  double ParallelPi(long numberOfSteps)
+        public async Task<double> ParallelPi(long numberOfSteps)
         {
             long count = 0;
             Parallel.For(0, _numberOfCores, new ParallelOptions{ MaxDegreeOfParallelism = _numberOfCores }, i =>
