@@ -22,4 +22,7 @@
     <ItemGroup>
       <ProjectReference Include="..\ParallelEstimationOfPi\ParallelEstimationOfPi.csproj" />
     </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Models\" />
+    </ItemGroup>
 </Project>

@@ -24,10 +24,6 @@ namespace ClientConsole
             if (!validNumberOfSteps)
                 throw new ArgumentException("Not a valid number for number of steps;");
 
-
-
-            //SocketSynchronousClient.StartClient();
-
             switch (choiceOfInput)
             {
                 // Grpc Client
@@ -36,7 +32,7 @@ namespace ClientConsole
                     break;
                 // Sockets Client
                 case 2:
-                    SocketClient.StartClient(numberOfSteps);
+                    AsynchronousSocketClient.StartClient(numberOfSteps);
                     break;
                 // Message Queue(Rabbit MQ)
                 case 3:
